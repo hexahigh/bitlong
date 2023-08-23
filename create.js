@@ -6,5 +6,5 @@ createButton.addEventListener("click", create)
 
 function create() {
     out = stringToBinary(urlInput.value)
-    output = out
+    output = "thisisaveryshortdomain.asso.eu.org?url=" + out
 }
