@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitlong</title>
+    <script src="custom1.js"></script>
     <script src="binary.js" defer></script>
     <script src="index.js" defer></script>
     <script src="create.js" defer></script>
@@ -16,6 +17,15 @@
         <label for="urlInput">Put your url here</label>
         <br>
         <input id="urlInput" type="text">
+        <br>
+        <label for="method">Select a method</label>
+        <br>
+        <select id="method">
+            <option value="b64">Base64</option>
+            <option value="binary">Binary</option>
+            <option value="b64_binary">Binary + Base64</option>
+            <option value="b64_binary_double">Binary + Base64 * 2</option>
+        </select>
         <br>
         <button id="createButton">Create url</button>
         <br>
