@@ -33,13 +33,13 @@ function checkHTTP() {
 }
 
 function checkType() {
-    if(t = binary) {
+    if(t == "binary") {
         c = binaryToString(c)
-    } else if(t = b64) {
+    } else if(t == "b64") {
         c = atob(c)
-    } else if(t = b64_binary) {
+    } else if(t == "b64_binary") {
         c = atob(binaryToString(c))
-    } else if(t = b64_binary_double) {
+    } else if(t == "b64_binary_double") {
         c = atob(binaryToString(atob(binaryToString(c))))
     }
     
