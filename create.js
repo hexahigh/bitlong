@@ -6,16 +6,19 @@ const method = document.getElementById("method")
 createButton.addEventListener("click", create)
 
 function create() {
-    out = createMethod()
-    output.value = "https://thisisaveryshortdomain.asso.eu.org?url=" + out
+    out, type = createMethod()
+    output.value = "https://thisisaveryshortdomain.asso.eu.org?type=" + type + "&url=" + out
 }
 
 function createMethod() {
     var out2
+    var type2
     if (method.value == "binary") {
         out2 = stringToBinary(urlInput.value)
+        type2 = "binary"
     } else if (method.value == "b64") {
         out2 = btoa(urlInput.value)
+        type2 = "binary"
     }
-    return out2
+    return out2, type
 }
