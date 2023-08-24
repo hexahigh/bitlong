@@ -26,5 +26,5 @@ function createMethod() {
         out2 = btoa(stringToBinary(urlInput.value))
         type2 = "b64_binary"
     }
-    return out2, type
+    return out2, type2
 }
