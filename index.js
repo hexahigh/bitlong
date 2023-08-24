@@ -6,7 +6,7 @@ var n = url.searchParams.get("no");
 var t = url.searchParams.get("type");
 
 // Check that there is something there otherwhise it will get stuck in a loop
-if(c) {
+if (c) {
     checkType()
     checkHTTP()
 
@@ -33,14 +33,24 @@ function checkHTTP() {
 }
 
 function checkType() {
-    if(t == "binary") {
+    if (t == "binary") {
         c = binaryToString(c)
-    } else if(t == "b64") {
+    } else if (t == "b64") {
         c = atob(c)
-    } else if(t == "b64_binary") {
+    } else if (t == "b64_binary") {
         c = atob(binaryToString(c))
-    } else if(t == "b64_binary_double") {
-        c = atob(binaryToString(atob(binaryToString(c))))
+    } else if (t == "b64_binary_double") {
+        c = binaryToString(atob(binaryToString(atob(c))))
     }
-    
+
+}
+
+
+function copyOutput() {
+    // Select the text field
+    output.select();
+    output.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(output.value);
 }
