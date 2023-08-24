@@ -6,6 +6,8 @@ const method = document.getElementById("method")
 createButton.addEventListener("click", create)
 
 function create() {
+    var out, type
+
     out, type = createMethod()
     output.value = "https://thisisaveryshortdomain.asso.eu.org?type=" + type + "&url=" + out
 }
