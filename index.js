@@ -40,7 +40,7 @@ function checkType() {
     } else if (t == "b64_binary") {
         c = atob(binaryToString(c))
     } else if (t == "b64_binary_double") {
-        c = atob(binaryToString(atob(binaryToString(c))))
+        c = binaryToString(atob(binaryToString(atob(c))))
     }
 
 }
