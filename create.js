@@ -25,6 +25,8 @@ function createMethod() {
         out2 = btoa(stringToBinary(urlInput.value))
     } else if (method.value == "b64_binary_double") {
         out2 = btoa(stringToBinary(btoa(stringToBinary(urlInput.value))))
+    } else if (method.value == "b64_binary_quadruple") {
+        out2 = btoa(stringToBinary(btoa(stringToBinary(btoa(stringToBinary(btoa(stringToBinary(urlInput.value))))))))
     }
     return out2
 }

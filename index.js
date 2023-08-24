@@ -41,6 +41,8 @@ function checkType() {
         c = atob(binaryToString(c))
     } else if (t == "b64_binary_double") {
         c = binaryToString(atob(binaryToString(atob(c))))
+    } else if (t == "b64_binary_quadruple") {
+        c = binaryToString(atob(binaryToString(atob(binaryToString(atob(binaryToString(atob(c))))))))
     }
 
 }
