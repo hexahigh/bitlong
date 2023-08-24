@@ -12,9 +12,9 @@ function create() {
 
 function createMethod() {
     var out2
-    if (method.value == binary) {
+    if (method.value == "binary") {
         out2 = stringToBinary(urlInput.value)
-    } else if (method.value == b64) {
+    } else if (method.value == "b64") {
         out2 = btoa(urlInput.value)
     }
     return out2
