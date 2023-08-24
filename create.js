@@ -20,5 +20,9 @@ function createMethod() {
         out2 = btoa(urlInput.value)
         type2 = "binary"
     }
+    else if (method.value == "b64_binary") {
+        out2 = btoa(stringToBinary(urlInput.value))
+        type2 = "b64_binary"
+    }
     return out2, type
 }
